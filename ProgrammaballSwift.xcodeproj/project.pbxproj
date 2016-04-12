@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		950408201CBD46BA0044E225 /* orbotix-Sphero-iOS-SDK-7b5576c in Resources */ = {isa = PBXBuildFile; fileRef = 9504081F1CBD46BA0044E225 /* orbotix-Sphero-iOS-SDK-7b5576c */; };
 		95BDAED61CAD8D3000A6F64D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BDAED51CAD8D3000A6F64D /* AppDelegate.swift */; };
 		95BDAED81CAD8D3000A6F64D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BDAED71CAD8D3000A6F64D /* ViewController.swift */; };
 		95BDAEDB1CAD8D3000A6F64D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BDAED91CAD8D3000A6F64D /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9504081F1CBD46BA0044E225 /* orbotix-Sphero-iOS-SDK-7b5576c */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "orbotix-Sphero-iOS-SDK-7b5576c"; path = "../../../Downloads/orbotix-Sphero-iOS-SDK-7b5576c"; sourceTree = "<group>"; };
+		950408211CBD49D00044E225 /* ProgrammaballSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProgrammaballSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		95BDAED21CAD8D3000A6F64D /* ProgrammaballSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgrammaballSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BDAED51CAD8D3000A6F64D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95BDAED71CAD8D3000A6F64D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		95BDAEC91CAD8D3000A6F64D = {
 			isa = PBXGroup;
 			children = (
+				950408211CBD49D00044E225 /* ProgrammaballSwift-Bridging-Header.h */,
 				95BDAED41CAD8D3000A6F64D /* ProgrammaballSwift */,
 				95BDAED31CAD8D3000A6F64D /* Products */,
 			);
@@ -54,6 +58,7 @@
 		95BDAED41CAD8D3000A6F64D /* ProgrammaballSwift */ = {
 			isa = PBXGroup;
 			children = (
+				9504081F1CBD46BA0044E225 /* orbotix-Sphero-iOS-SDK-7b5576c */,
 				95BDAED51CAD8D3000A6F64D /* AppDelegate.swift */,
 				95BDAED71CAD8D3000A6F64D /* ViewController.swift */,
 				95BDAED91CAD8D3000A6F64D /* Main.storyboard */,
@@ -96,6 +101,11 @@
 				TargetAttributes = {
 					95BDAED11CAD8D3000A6F64D = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -124,6 +134,7 @@
 			files = (
 				95BDAEE01CAD8D3000A6F64D /* LaunchScreen.storyboard in Resources */,
 				95BDAEDD1CAD8D3000A6F64D /* Assets.xcassets in Resources */,
+				950408201CBD46BA0044E225 /* orbotix-Sphero-iOS-SDK-7b5576c in Resources */,
 				95BDAEDB1CAD8D3000A6F64D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +214,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "ProgrammaballSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -242,6 +254,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "ProgrammaballSwift-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -254,6 +267,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ProgrammaballSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TarynParker.ProgrammaballSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -266,6 +283,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ProgrammaballSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TarynParker.ProgrammaballSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -290,6 +311,7 @@
 				95BDAEE61CAD8D3000A6F64D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
